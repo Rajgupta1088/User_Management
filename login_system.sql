@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2024 at 01:18 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.1
+-- Generation Time: Jan 22, 2025 at 06:31 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -32,7 +31,7 @@ CREATE TABLE `tbladmin` (
   `id` int(11) NOT NULL,
   `userName` varchar(120) DEFAULT NULL,
   `password` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tbladmin`
@@ -57,19 +56,19 @@ CREATE TABLE `tblusers` (
   `regDate` timestamp NULL DEFAULT current_timestamp(),
   `isActive` int(1) DEFAULT NULL,
   `lastUpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `tblusers`
 --
 
 INSERT INTO `tblusers` (`id`, `firstName`, `lastName`, `emailId`, `mobileNumber`, `userPassword`, `regDate`, `isActive`, `lastUpdationDate`) VALUES
-(6, 'Raj', 'Gupta', 'admin@gmail.com', '9888654633', '10881088', '2024-12-14 00:10:36', 1, NULL),
-(7, 'Vandan', 'Gupta', 'vandana@gmail.com', '9864265786', '12121212', '2024-12-14 00:11:15', 1, NULL),
-(8, 'Jyoti', 'Verma', 'jyoti@gmail.com', '8964730382', '11111111', '2024-12-14 00:11:48', 1, NULL),
-(9, 'Dolly', 'Keshri', 'dolly@gmail.com', '9779767889', '33333333', '2024-12-14 00:12:27', 1, NULL),
-(10, 'Vayuz', 'Technologies', 'Vayuz@gmail.com', '9988776543', '77887788', '2024-12-14 00:13:17', 1, NULL),
-(11, 'Rajesh', 'Pachori', 'rajesh@gmail.com', '9876789678', '99889988', '2024-12-14 00:14:13', 1, NULL);
+(6, 'Raj', 'Gupta', 'admin@gmail.com', '9888654633', '10881088', '2025-01-20 18:40:55', 1, NULL),
+(7, 'Vandan', 'Gupta', 'vandana@gmail.com', '9864265786', '12121212', '2025-01-21 18:37:13', 1, NULL),
+(8, 'Jyoti', 'Verma', 'jyoti@gmail.com', '8964730382', '11111111', '2025-01-20 18:40:35', 1, NULL),
+(9, 'Dolly', 'Keshri', 'dolly@gmail.com', '9779767889', '33333333', '2025-01-21 18:39:36', 1, NULL),
+(10, 'Medigence', 'Technologies', 'Medigence@gmail.com', '9988776543', '77887788', '2025-01-21 18:40:00', 1, '2025-01-22 05:22:17'),
+(11, 'Rajesh', 'Pachori', 'rajesh@gmail.com', '9876789678', '99889988', '2025-01-20 18:41:11', 1, NULL);
 
 --
 -- Indexes for dumped tables
@@ -101,7 +100,7 @@ ALTER TABLE `tbladmin`
 -- AUTO_INCREMENT for table `tblusers`
 --
 ALTER TABLE `tblusers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
